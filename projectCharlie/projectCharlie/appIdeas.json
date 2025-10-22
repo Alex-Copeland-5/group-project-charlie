@@ -43,6 +43,48 @@
       "repo": "https://github.com/sweetiesyvi/ProjectBravo",
       "app": "https://sweetiesyvi.github.io/ProjectBravo/",
       "img": "https://sweetiesyvi.github.io/ProjectBravo/images/ClickClickGameSnippet.png"
-    }
+    },
+    {
+      "name": "Reaction Time tester",
+      "repo": "https://github.com/Gunnar-Schmidtt/project-bravo",
+      "app": "https://gunnar-schmidtt.github.io/project-bravo/",
+      "img": "https://gunnar-schmidtt.github.io/assets/game-thumb.jpg"
+     },
+     {
+       "name": "Memory Card",
+       "repo": "https://github.com/nhu-tran1105/Bravo",
+       "app": "https://nhu-tran1105.github.io/Bravo/",
+       "img": "https://github.com/nhu-tran1105/Bravo/blob/main/images/game_thumb.png"
+     },
+     {
+       "name": "Emoji Clicker",
+       "repo": "https://github.com/haydenknight88/knight-project-bravo",
+       "app": "https://haydenknight88.github.io/knight-project-bravo/",
+       "img": "https://github.com/haydenknight88/haydenknight88/blob/main/images/emojiClicker-screenshot.png"
+     }
+     {
+       "name": "Suit Sorter A Tiny Card Sorting Game",
+       "repo": "https://github.com/Saimon215/a-tiny-game",
+       "app": "https://saimon215.github.io/a-tiny-game/",
+       "img": "https://github.com/Saimon215/a-tiny-game/blob/main/assets/screenshot-game.png"
+     },
+     {
+        "name": "Snap Test",
+        "repo": "https://github.com/plateplate/project-bravo",
+        "app": "https://plateplate.github.io/project-bravo/"
+      },
+      {
+        "name": "Punching Bag",
+        "repo": "https://github.com/Genovios/punching-bag-game",
+        "app": "https://genovios.github.io/punching-bag-game/"
+      },
+      {
+        "name": "Fortune Clicker",
+        "repo": "https://github.com/EDMullins/FortuneClicker",
+        "app": "https://edmullins.github.io/FortuneClicker/"
+      },
+
+
+}
   ]
 }
