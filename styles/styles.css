@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+nav {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #23272a !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border-bottom: 3px solid #00bcd4;
+}
+
+#gameHouse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  background-color: #1e1e1e;
+  flex-wrap: wrap;
+
+}
+
+#appIdeas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 2em;
+  background-color: #555555;
+
+}
+
+img {
+  max-width: 300px;
+  max-height: 200px;
+  height: auto;
+}
+
+h3 {
+  color: #020607;
+}
