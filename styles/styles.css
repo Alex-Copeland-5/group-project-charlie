@@ -1,44 +1,145 @@
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Base */
+:root {
+  --bg: #121212;
+  --bg-elev-1: #1e1e1e;
+  --bg-elev-2: #2a2a2a;
+  --text: #ffffff;
+  --muted: #b5b5b5;
+  --brand: #00bcd4;
+  --brand-soft: #80deea;
+  --shadow-1: 0 4px 16px rgba(0,0,0,0.15);
+  --shadow-2: 0 6px 20px rgba(0,0,0,0.30);
+  --shadow-3: 0 8px 24px rgba(0,0,0,0.40);
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+  margin: 0;
 }
 
-nav {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
+/* Navbar */
+.navbar {
   background: #23272a !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  border-bottom: 3px solid #00bcd4;
+  box-shadow: var(--shadow-1);
+  border-bottom: 3px solid var(--brand);
 }
 
+/* Legacy wrapper (no longer needed but safe to keep) */
 #gameHouse {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2em;
-  background-color: #1e1e1e;
+  background-color: var(--bg-elev-1);
   flex-wrap: wrap;
-
 }
 
+/* Responsive grid for the app tiles */
 #appIdeas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
   padding: 2em;
-  background-color: #555555;
-
+  background-color: #1e1e1e;
+  border-radius: 10px;
 }
 
-img {
-  max-width: 300px;
-  max-height: 200px;
-  height: auto;
+/* Card styling for any child (works with existing JS) */
+#appIdeas > div,
+.app-card {
+  background: var(--bg-elev-2);
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 220px;
 }
 
-h3 {
-  color: #020607;
+#appIdeas > div:hover,
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-3);
+}
+
+/* Titles */
+#appIdeas h3,
+.app-title {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Images */
+#appIdeas img,
+.app-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #333;
+  display: block;
+}
+
+/* Placeholder block when no image exists */
+.img-placeholder {
+  width: 100%;
+  height: 140px;
+  border-radius: 8px;
+  background: #3a3a3a;
+}
+
+/* Links area */
+.app-links {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#appIdeas a,
+.app-links a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+#appIdeas a:hover,
+.app-links a:hover {
+  color: var(--brand-soft);
+  text-decoration: underline;
+}
+
+/* Spacing utility for arbitrary injected content */
+#appIdeas > * > * + * {
+  margin-top: 0.5rem;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  #appIdeas { grid-template-columns: 1fr; gap: 1rem; padding: 1.25rem; }
+  #appIdeas > div, .app-card { min-height: 200px; }
+}
+
+/* Optional: nicer selection color */
+::selection {
+  background: rgba(0, 188, 212, 0.35);
+  color: #fff;
 }

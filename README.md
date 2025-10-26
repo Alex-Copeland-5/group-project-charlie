@@ -48,4 +48,3 @@ Users can **search**, **browse**, and **launch** games directly, viewing both th
 
 ## 🧩 Code Base Overview
 **Front-End Structure**
-

@@ -1,50 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group 2's Gaming Emporium</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Group 2's Gaming Emporium</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles/styles.css" />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/styles.css">
+<style>
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+</style>
 </head>
 
-<body>
+<body class="bg-dark text-light" style="font-family: 'Inter', sans-serif;">
 
-<!-- Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">Group 2's Gaming Emporium</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand fw-bold" href="index.html">
+        🎮 Group 2's Gaming Emporium
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#games">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Alex-Copeland-5/group-project-charlie" target="_blank">
+              GitHub Repo
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <!-- End of Navbar-->
+  <!-- End Navbar -->
 
-  <div id ="gameHouse" class="row-md-6">
-    <div id="appIdeas" class="d-flex justify-content-center align-items-center">
+  <!-- Header Section -->
+  <header class="container text-center py-5">
+    <h1 class="fw-bold display-5 mb-3">Welcome to Group 2’s Gaming Emporium 🎮</h1>
+    <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+      A collaborative student project for <strong>CIS 376 – Web Development</strong>.  
+      Explore a collection of mini web games created by UNA students!  
+      Browse, play, and get inspired by our classmates’ creativity.
+    </p>
 
+    <div class="d-flex justify-content-center gap-2 mt-3">
+      <a href="#games" class="btn btn-info">Browse Games</a>
+      <a href="https://github.com/Alex-Copeland-5/group-project-charlie" target="_blank" class="btn btn-outline-info">View Repo</a>
     </div>
 
-  </div>
+    <!-- Search Feature -->
+    <div class="mt-4">
+      <label for="searchInput" class="visually-hidden">Search for a game by name</label>
+      <input
+        type="text"
+        id="searchInput"
+        class="form-control w-50 mx-auto"
+        placeholder="🔍 Search for a game by name..."
+        onkeyup="filterGames()"
+      />
+    </div>
+  </header>
 
+  <!-- Main Content -->
+  <main id="games" class="container py-4">
+    <h2 class="text-center mb-4 fw-bold">Featured Class Games</h2>
+    <div id="appIdeas" class="app-grid"></div>
+  </main>
 
+  <!-- About Section -->
+  <section id="about" class="container py-5">
+    <h2 class="text-center mb-3 fw-bold">👥 Team Information</h2>
+    <p class="text-center text-secondary mb-4">
+      <strong>Team Name:</strong> Group 2 — DEV Charlie  
+      <br>
+      <strong>Members:</strong>
+      <br>
+      <a href="https://github.com/Saimon215" target="_blank">Saimon Hasan</a> |
+      <a href="https://github.com/Alex-Copeland-5" target="_blank">Alex Copeland</a> |
+      <a href="https://github.com/jacobej15" target="_blank">Jacobe Johnson</a>
+    </p>
+
+    <p class="mx-auto" style="max-width: 700px;">
+      <strong>User Story:</strong><br>
+      As a <em>web development student</em>, I want to <em>view and explore my classmates' games</em>,
+      so that I can <em>learn from their design and coding techniques.</em>
+    </p>
+
+    <p class="mx-auto mt-3" style="max-width: 700px;">
+      <strong>Validation:</strong><br>
+      ✅ HTML & CSS validated using Nu HTML Checker  
+      ✅ Accessibility checked with WAVE (no contrast errors)  
+      ✅ Responsive design using Bootstrap grid system
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 border-top mt-5">
+    <p class="mb-1 text-secondary small">
+      © 2025 Group 2 | UNA CIS 376 Web Development
+    </p>
+    <a
+      href="https://github.com/Alex-Copeland-5/group-project-charlie"
+      target="_blank"
+      class="text-decoration-none text-info small"
+    >
+      🔗 View our GitHub Repository
+    </a>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Custom Script -->
+  <script src="scripts/scripts.js"></script>
+
+  <!-- Search Filter Script -->
+  <script>
+    function filterGames() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('#appIdeas article');
+      cards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        card.style.display = title.includes(input) ? '' : 'none';
+      });
+    }
+  </script>
 </body>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
-    integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
-<script src="scripts/scripts.js"></script>
-
 </html>
